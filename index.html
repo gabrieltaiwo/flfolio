@@ -269,7 +269,15 @@
             </div>
 
             <div class="md:w-1/2 w-full">
-                <form name="contact" method="POST" data-netlify="true" class="space-y-4">
+                <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="space-y-4">
+                    <!-- Required hidden field for Netlify form detection -->
+                    <input type="hidden" name="form-name" value="contact" />
+                    
+                    <!-- Honeypot field to prevent spam -->
+                    <p class="hidden">
+                        <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+                    </p>
+
                     <div>
                         <label for="name" class="block text-xs uppercase tracking-widest text-slate-500 mb-2 font-bold">Full Name</label>
                         <input type="text" id="name" name="name" placeholder="John Doe" required class="w-full bg-slate-900 border border-slate-800 rounded-lg px-4 py-3 focus:outline-none focus:border-blue-500 transition-colors text-white">
