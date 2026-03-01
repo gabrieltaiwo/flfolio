@@ -1,0 +1,10 @@
+/* Custom Glassmorphism and UI Effects */
+.glass { 
+    background: rgba(255, 255, 255, 0.03); 
+    backdrop-filter: blur(10px); 
+}
+
+.timeline-line { 
+    width: 2px; 
+    background: linear-gradient(to bottom, #0277bd, #00b0ff, transparent); 
+}
